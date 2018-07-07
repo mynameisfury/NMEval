@@ -16,6 +16,8 @@ namespace NMEval
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            BungieClient bungieClient = new BungieClient();
+            bungieClient.QueryApi();
         }
     }
 }

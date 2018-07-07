@@ -13,9 +13,9 @@ namespace NMEval
         {
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Add("X-API-Key", "YOUR-API-KEY-HERE");
+                client.DefaultRequestHeaders.Add("X-API-Key", "61cf5518bb3c4fbc91acbb28b572e477");
 
-                var response = client.GetAsync("https://www.bungie.net/platform/Destiny/Manifest/InventoryItem/1274330687/").Result;
+                var response = client.GetAsync("https://www.bungie.net/platform/Content/GetContentType/Weapons").Result;
                 var content = response.Content.ReadAsStringAsync().Result;
                 dynamic item = Newtonsoft.Json.JsonConvert.DeserializeObject(content);
 
